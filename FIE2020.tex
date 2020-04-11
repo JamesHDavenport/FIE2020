@@ -1,0 +1,151 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Overcoming the Challenges of Teaching Cybersecurity in UK Computer Science Degree Programmes}
+
+\author{\IEEEauthorblockN{Tom Crick\IEEEauthorrefmark{1}, James
+    H. Davenport\IEEEauthorrefmark{2}, Paul Hanna\IEEEauthorrefmark{3}, Alastair
+    Irons\IEEEauthorrefmark{4} and Tom Prickett\IEEEauthorrefmark{5}} 
+\IEEEauthorblockA{\IEEEauthorrefmark{1}%School of Education, 
+Swansea University, Swansea, UK; Email: thomas.crick@swansea.ac.uk} 
+\IEEEauthorblockA{\IEEEauthorrefmark{2}%Dept.~Computer Science, 
+University of Bath, Bath, UK; Email: j.h.davenport@bath.ac.uk}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}, 
+Ulster University, Belfast, UK; Email: jrp.hanna@ulster.ac.uk}
+\IEEEauthorblockA{\IEEEauthorrefmark{4}%Faculty of Technology, 
+Sunderland University, Sunderland, UK; Email: alastair.irons@sunderland.ac.uk}
+\IEEEauthorblockA{\IEEEauthorrefmark{5}%Dept.~Computer\&Information Sciences, 
+Northumbria University, Newcastle upon Tyne, UK; Email: tom.prickett@northumbria.ac.uk}}
+\maketitle
+
+\begin{abstract}
+This Innovative Practice Full Paper explores the diversity of challenges relating to the teaching of
+cybersecurity in UK higher education degree programmes, through the lens of national policy, to the
+impact on pedagogy and practice. An article published in the Harvard Business Review in August 2019
+argued that \textit{"Every Computer Science Degree Should Require a Course in Cybersecurity "}; in the UK, universities -- alongside government, industry and professional engineering bodies -- have been
+championing this over recent years, focusing on computer science and cognate undergraduate degrees
+programmes; one such professional body (BCS, The Chartered Institute for IT) has been mandating this
+in accredited undergraduate degree programmes since 2015. Delivering cybersecurity effectively across
+general computer science programmes presents a number of challenges related to pedagogy,
+resources, faculty and infrastructure, as well as responding to industry requirements.
+
+There is a serious demand for cybersecurity specialists, both in the UK and globally (estimates vary, but are always large – and increasing); there is thus significant and growing higher education provision
+related to specialist undergraduate and postgraduate courses focusing on varying aspects of
+cybersecurity (for example, cryptography, computer security, networks, digital forensics, ethical hacking, etc). To make our digital systems and products more secure, all in IT need to know some cybersecurity — thus, there is a case for depth as well as breadth; this is not a new concern, but it is a growing one. Computer science and cognate engineering disciplines are evolving to meet these demands -- both at school-level, as well as at university -- however, doing so is not without challenges. This paper explores the progress made to date in the UK, building on previous work in cybersecurity education and accreditation by highlighting key challenges and opportunities, as well as identifying a number of
+enhancement activities for use by the international cybersecurity education community. It frames these
+challenges through concerns with the quality and availability of underpinning educational resources, the
+competencies and skills of faculty (especially focusing on pedagogy, progression and assessment), and
+articulating the necessary technical resources and infrastructure related to delivering rigorous
+cybersecurity content in general computer science and cognate degrees.
+
+Though this critical evaluation of an emerging national case study of cybersecurity education in the UK,
+we also present a number of recommendations across policy and practice -- from pedagogic principles
+and developing effective cybersecurity teaching practice, challenges in the recruitment, retention and
+professional development of faculty, to supporting diverse routes into post-compulsory cybersecurity
+education (and thus, diverse careers) -- to provide the foundation for potential replicability and portability to other jurisdictions contemplating related education and skills reform initiatives and interventions.
+\end{abstract}
+
+\begin{IEEEkeywords}
+cybersecurity, computer science education, curricula, accreditation, UK
+\end{IEEEkeywords}
+
+\section{Introduction}
+An article published in the Harvard Business Review in August 2019 argued that ``{\emph{Every Computer Science Degree Should Require a Course in Cybersecurity}}''\cite{cable_2019}; in the UK, universities
+--- alongside government, industry and professional bodies -- have been championing this over recent years, focusing on computer science and cognate undergraduate degrees programmes. One professional body --- BCS, The Chartered Institute for IT --- has been mandating this in accredited undergraduate degree programmes since 2015\cite{Cricketal2019}. Delivering cybersecurity effectively across general computer science programmes presents a number of challenges related to pedagogy, underpinning educational resources, available skills and technical resources. This paper explores the progress to date, as well as a starting call to arms to the UK higher education sector by highlighting a number of future challenges and opportunities.
+
+\section{Background}
+\subsection{Pedagogic Principles}
+%To do - what are the key points?
+%technical and not technical skills?%
+
+Though it is generally thought of as part of computing, cybersecurity is actually a multidisciplinary ``subject''. This point has been made several times, e.g.  \cite{Stockman2013}, who described integrating Criminal Justice and Political Science into the study of cybersecurity.  
+
+If we look at the academic skill sets that a good Chief Information Security Officer should have, we can break them into three rough groupings.
+\begin{description}
+\item[Psychology]While the authors would not necessarily go as far as PurpleSec, who claim \cite{PurpleSec2020a} that ``98\% of cyber attacks rely on social engineering'', it is quite clear that a very large proportion do: not least the attacks classified as ``phishing'', ``spear-phishing'' and ``whaling''. The technical skills required to go phishing are minimal: being able to write
+\begin{verbatim}
+<a href="bad url">good url</a>
+\end{verbatim}
+generally suffices, and even that can be bought in.  Forging e-mail addresses is generally needed as well if one is to go spear-phishing. But the real skill comes in knowing what will get under people's radar.
+\par
+To defend against phishing, to inculcate good password habits\footnote{Whatever those might be: opinions vary and well-known pundits (e.g. \cite{Grimes2019b} will disagree with NIST's advice \cite{NIST2019e}.} and much more depends on understanding, or at least following the advice of those who understand, the psychology of the user \cite{InglesantSasse2010a}.
+\item[Managerial]Clearly the CISO has to manage the team. But there is much more than that. The CISO has to be a team player within top management. The CIO is responsible for the Cybersecurity Incident Response Plan. But \cite{Secureworks2019a} lists among its major flaws in CIRPs that they are lacking organizational support and buy-in:
+\begin{itemize}
+\item Plan sponsor lacks appropriate authority
+(e.g., Executive Leadership Team, CIO, CTO, CISO)
+\item Incident stakeholders do not know the plan exists
+\item Was developed unilaterally by a single business unit
+\item Roles and responsibilities for non-technical teams are vague
+\end{itemize}
+\item[Technical]
+\end{description}
+
+%What else?
+
+\subsection{Developing effective cybersecurity teaching practice}
+
+What is the most appropriate way to teach cybersecurity? \cite{Weiss:2013:THC:2527148.2527180} highlights there are benefits from teaching this in a practical manner. Real world case studies can be employed \cite[e.g.]{BritishAirways2018a,Zoom2020a}. Use can be made of guest lectures by industrialists to share practical insights and hence providing students with micro-exposure to the world of work is another positive contribution. One further approach is the inclusion of appropriate cybersecurity standards within the curricula.
+
+The PCI DSS \cite{PCI2018b} is one such standard that has been used in precisely this manner. PCI DSS underpins all processing of credit/debit cards. Nevertheless, it is very rarely mentioned in generalist computer scientist courses. This would not matter so much if everyone handling payments data were sent by their employers on an effective PCI DSS course. However, the payments business is now so spread across websites, often run by small and medium enterprises (SME), or non-specialists. Even larger enterprises are not immune: \cite{BritishAirways2018a} reports that the recent British Airways breach was caused by a failure to adhere to PCI DSS in website maintenance.
+
+Another way of adopting a more practical pedagogy is by teaching cybersecurity through the lens of hacking or the hacker curriculum \cite{bratus2010teaching}. Such an approach facilitates students to be more experimental and creative in their exploration of the discipline and can have corresponding benefits for their engagement. 
+
+
+\subsection{challenges in the recruitment, retention and professional development of faculty}
+It is well known that cybersecurity skills are in short supply, in both industry~\cite{Ackerman2019a} and academia~\cite{schneider2013,endicott2018searching}. The demand for cybersecurity skills in industry makes it difficult for academia to attract academics with knowledge, practical experience, research background and academic aspirations. As universities expand their cybersecurity provision it is not uncommon to find multiple jobs advertised at the same time. Recent example have included a professor of cybersecurity, two senior academic positions and two junior academic positions in one advert. There are other examples in the UK of cybersecurity lecturing jobs remaining unfilled for longer than a year; there are also examples of cybersecurity research groups moving en masse from one university to another.
+
+TO DO - this survey is quite old now - something more recent the ESG 
+For example, research into the state of IT conducted annually by Enterprise Strategy Group (ESG) has revealed that the skills gap in information security continues to widen and has doubled in the past five years; in 2014, 23\% of respondents to the survey stated that their organisation had a problematic shortage of information security skills -- this had climbed to 51\% at the beginning of 2018~\cite{ESG:2018}. Clearly, cybersecurity is an issue which is being felt across many industries and organisations, and is a concern which extends beyond IT leadership into the boardroom~\cite{Ackerman2019a}.
+
+The ESG survey is international, but ESG have confirmed that the UK figures are very similar. In the UK, there has been a resurgence of job adverts to recruit academic staff with specialisms in cybersecurity over the past three years.
+
+TO DO - ?CPD?
+
+\subsection{Quality of resources to support cybersecurity education?}
+Effective teaching requires appropriate supporting resources. The extent to which appropriate resources are available and suitable will be evaluated next. This evaluation highlights a number of occasions when underpinning resources could be improved. 
+\subsubsection{Underpinning resources}
+TO DO should we reference last years paper here? Drop etc \cite{Drop2019}?
+\subsubsection{Provision of laboratories}
+Delivering a practical take upon cybersecurity often requires specialist computing resources. Commonly such a laboratory will be not directly connected to the JANET network in order not to breach the operating conditions of the network. This creates further challenges in the form of acquisition and maintenance of specialist laboratory provision. TO DO - could benefit from a reference
+
+
+\section{Research Questions}
+
+\section{Research Approach}
+
+\section{Body - Structure here to do}
+
+\section{Conclusions and Further Work}
+
+
+
+
+
+
+
+
+\section*{Acknowledgment}
+
+Thanks to ....
+
+%\section*{References}
+
+\bibliographystyle{IEEEtran}
+%\bibliography{security}
+\bibliography{IEEEabrv,security}
+
+
+
+
+
+\end{document}
