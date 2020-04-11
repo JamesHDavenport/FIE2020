@@ -70,7 +70,7 @@ An article published in the Harvard Business Review in August 2019 argued that `
 %technical and not technical skills?%
 
 Though it is generally thought of as part of computing, cybersecurity is actually a multidisciplinary ``subject'', or, in the words of \cite{Parrishetal2018a} a \emph{meta-discipline}. This point has been made several times, e.g.  in \cite{Stockman2013}, who described integrating Criminal Justice and Political Science into the study of cybersecurity.  
-
+\subsection{Adacemic skills}
 If we look at the academic skill sets that a good Chief Information Security Officer should have, we can break them into three rough groupings.
 \begin{itemize}
 \item{\bf Psychology:} While the authors would not necessarily go as far as PurpleSec, who claim \cite{PurpleSec2020a} that ``98\% of cyber attacks rely on social engineering'', it is quite clear that a very large proportion do: not least the attacks classified as ``phishing'', ``spear-phishing'' and ``whaling''. The technical skills required to go phishing are minimal: being able to write
@@ -91,7 +91,7 @@ To defend against phishing, to inculcate good password habits\footnote{Whatever 
 All of these are managerial failings.
 \item{\bf Technical:} there are of course many technical things that a CISO needs to be on top of. These tend to be the ones that a Computer Science Department is best at teaching, though even here there are challenges --- see section \ref{practice}.
 \end{itemize}
-
+\subsection{Human skills}\label{sec:human}
 Besides the subject-specific skills mentioned above, there are also the human, or `soft', skills. It could be argued (e.g. \cite{Palkar2013a}) that these are underrated throughout computing education, but they are certainly necessary in cybersecurity.
 \cite{Froehlich2019a} stresses them for the CISO, but the same is true throughout the cybersecurity industry. See also \cite{InfoSec2019a} --- obviously they have an axe to grind, but the message resonates with much the authors have heard, an agress with the Wall Street Journals Cybersecurity Executive Forum \cite{WallStreetJournal2018c}. Their list of ``top five skills'' is this.
 \begin{enumerate}
@@ -146,11 +146,27 @@ Outsourcing to the cloud means that the students' ``hacking'' commands traverse 
 
 \section{Teaching Innovations}
 \subsection{Second Author}
-This author teaches on a Cybersecurity module in a general computing degree. As such there is a wide range of backgrounds on the course.
+This author teaches on a Cybersecurity module in a general computing degree. As such there is a wide range of backgrounds on the course. Since Cybersecurity is a practical subject, much of the learning takes place through the coursework. The assessment for the module is structured with these weightings.
 \begin{itemize}
 \item[20]Class test --- basically a traditional examination. Normally a closed-book test, but this year, due to Covid-19, it will be sat by students who have dispersed, so will have to be open-book.
-\item[30]Group presentation. The class divide themselves into groups of 4--5, and each group picks a topic from either the ``OWASP Top 10'' \cite{OWASP2017a} or the ``OWASPMobile Top  10'' \cite{OWASP2016a} and does a presentation on it to the rest of the class. 
-\item[50]The students have to analyse three on-line purchases (or mock-purchases, they are allowed to use an invalid  credit card) made subject to PCI DSS, looking at the screen as the ordinary customer would see it, but also at the browser logs (HAR files) and
+\item[30]Group presentation. The class divide themselves into groups of 4--5, and each group picks a topic from either the ``OWASP Top 10'' \cite{OWASP2017a} or the ``OWASPMobile Top  10'' \cite{OWASP2016a} and does a presentation on it to the rest of the class.  In terms of the human skills identified in section \ref{sec:human}, this is meant to help with the commnication and team-working skills. Indeed, Covid-19 and the consequent dispersal of the students has meant that they are also learning remote team working: an unexpected bonus.  The author has found that it is extremey important to share this rationale, and the evidence at \cite{WallStreetJournal2018c,InfoSec2019a,Beaver2019c} with them.  Industrial speakers are also asked to stress these points.
+\item[50]The students have to analyse three different (i.e. different vendors and style) on-line purchases (or mock-purchases, they are allowed to use an invalid  credit card) made subject to PCI DSS, looking at the screen as the ordinary customer would see it, but also at the browser logs (HAR files) and network logs (Wireshark or equivalent). For each, they are asked the following.
+\begin{enumerate}
+\item With which websites does your browser communicate during the transaction? Are there any that worry you, or whose function you do not understand?
+\item[*]Last year two different students, purchasing from two different UK-based sites, found \verb+yandex.ru+ appearing here.
+\item Looking at the logs, to which sites does your payment card number get sent, and how is it protected in transit? You \emph{should} quote the relevant part of the logs, but \emph{should} replace the card number and any other identifying/sensitive data, e.g. by \verb+NNNN NNNN NNNN NNNN+, before quoting.
+\item Looking at the HTML you have saved, do you feel confident you know what it is doing with your data?
+\item How dependent is the HTML you have on the correct functioning of the DNS? In particular, could bad DNS results result in a security problem?
+\item What makes you think that the sum of money displayed to you is the sum that will be transmitted to your bank?
+\end{enumerate}
+In addition, they are asked these overall questions.
+\begin{enumerate}
+\item What have you learned about the security of your card data?
+\item In particular, what did you learn from the logs/HTML that you could not have reasonably deduced as a shopper with no access to these?
+\item How obvious is the security of the websites to the shopper?
+\item How might the system be more transparent to the shopper?
+\end{enumerate}
+
 \end{itemize}
 \subsection{Fourth Author}
 This author teaches on dedicated BSc and MSc courses in Cybersecurity. The author has employed a number of assessment instruments in cybersecurity to encourage students to use the assessment activities to enable student learning, described more fully in [blinded]. 
