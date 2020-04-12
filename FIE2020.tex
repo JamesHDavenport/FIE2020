@@ -70,7 +70,7 @@ An article published in the Harvard Business Review in August 2019 argued that `
 %technical and not technical skills?%
 
 Though it is generally thought of as part of computing, cybersecurity is actually a multidisciplinary ``subject'', or, in the words of \cite{Parrishetal2018a} a \emph{meta-discipline}. This point has been made several times, e.g.  in \cite{Stockman2013}, who described integrating Criminal Justice and Political Science into the study of cybersecurity.  
-\subsection{Academic skills}
+\subsection{Academic skills}\label{sec:academic}
 If we look at the academic skill sets that a good Chief Information Security Officer should have, we can break them into three rough groupings.
 \begin{itemize}
 \item{\bf Psychology:} While the authors would not necessarily go as far as PurpleSec, who claim \cite{PurpleSec2020a} that ``98\% of cyber attacks rely on social engineering'', it is quite clear that a very large proportion do: not least the attacks classified as ``phishing'', ``spear-phishing'' and ``whaling''. The technical skills required to go phishing are minimal: being able to write
@@ -79,7 +79,7 @@ If we look at the academic skill sets that a good Chief Information Security Off
 \end{verbatim}
 generally suffices, and even that can be bought in.  Forging e-mail addresses is generally needed as well if one is to go spear-phishing. But the real skill comes in knowing what will get under people's radar.
 \par
-To defend against phishing, to inculcate good password habits\footnote{Whatever those might be: opinions vary and well-known pundits (e.g. \cite{Grimes2019b} will disagree with NIST's advice \cite{NIST2019e}.} and much more depends on understanding, or at least following the advice of those who understand, the psychology of the user \cite{InglesantSasse2010a}.
+To defend against phishing, to inculcate good password habits\footnote{Whatever those might be: opinions vary and well-known pundits (e.g. \cite{Grimes2019b}) will disagree with NIST's advice \cite{NIST2019e}.} and much more depends on understanding, or at least following the advice of those who understand, the psychology of the user \cite{InglesantSasse2010a}. In particular it is imprtant not to fall into the ``users are the enemy'' trap \cite{AdamsSasse1999}.
 \item{\bf Managerial:} Clearly the CISO has to manage the team. But there is much more than that. The CISO has to be a team player within top management. The CISO is responsible for the Cybersecurity Incident Response Plan. But \cite{Secureworks2019a} lists among its major flaws in CIRPs that they are lacking organisational support and buy-in:
 \begin{itemize}
 \item Plan sponsor lacks appropriate authority
@@ -89,7 +89,7 @@ To defend against phishing, to inculcate good password habits\footnote{Whatever 
 \item Roles and responsibilities for non-technical teams are vague.
 \end{itemize}
 All of these are managerial failings.
-\item{\bf Technical:} there are of course many technical things that a CISO needs to be on top of. These tend to be the ones that a Computer Science Department is best at teaching, though even here there are challenges --- see section \ref{practice}.
+\item{\bf Technical:} there are of course many technical things that a CISO needs to be on top of. These tend to be the ones that a Computer Science Department is best at teaching, though even here there are challenges --- see section \ref{practice}. One specific question is ``how much cryptography need a security expert know''. The classic answer is ``enough not to be dangerously ignorant, and not enough to be dangerously knowledgeable'', which is true but not helpful.
 \end{itemize}
 \subsection{Human skills}\label{sec:human}
 Besides the subject-specific skills mentioned above, there are also the human, or `soft', skills. It could be argued (e.g. \cite{Palkar2013a}) that these are underrated throughout computing education, but they are certainly necessary in cybersecurity.
@@ -130,7 +130,9 @@ Effective teaching requires appropriate supporting resources. The extent to whic
 \subsection{Underpinning resources}
 The formal resources for Cybersecurity education are in reasonable shape given the inevitable fast-moving nature of the subject. The authors see \cite{Anderson2008} as a major work, though probably daunting as a extbook. It is dated, but a new edition is in preparation, and largely on the author's website. More recently a UK-funded project has produced the ``Cyber Security Body Of Knowledge'' \cite{Bristol2019a}. This is not intended as a textbook, but is a useful reference.
 
-More worrying is the problem described in \cite[\S IV.B]{Cricketal2019} --- the state of general computer science educational resources with respect to cybersecurity. In particular \cite{Drop2019} describes the poor state of database textbooks withrespect to SQL injection.  Despite the fact that SQL injection is theoretcially well-understood, it is still a real problem: 
+One gap in the educational resources is the absence, as far as the authors know, of a good answer to ``how much cryptography need a security expert know''.
+
+More worrying is the problem described in \cite[\S IV.B]{Cricketal2019} --- the state of general computer science educational resources with respect to cybersecurity. In particular \cite{Drop2019} describes the poor state of database textbooks withrespect to SQL injection.  Despite the fact that SQL injection is theoretically well-understood, it is still a real problem today, tweny years after it was first described: 
 \begin{quote}
 Overall,
 SQL Injection (SQLi) accounted for more than 72%
@@ -155,7 +157,10 @@ Outsourcing to the cloud means that the students' ``hacking'' commands traverse 
 
 \section{Teaching Innovations}
 \subsection{Second Author}\label{sec:second} %JHD
-This author teaches on a Cybersecurity module in a general computing degree. As such there is a wide range of backgrounds on the course. Since Cybersecurity is a practical subject, much of the learning takes place through the coursework. The assessment for the module is structured with these weightings.
+This author teaches on a Cybersecurity module in a general computing degree. As such there is a wide range of backgrounds on the course. We asked in section \ref{sec:academic} ``how much cryptography need a security expert know''. The answer for this course is ``about 90 minutes worth'', which seems to cover the bases well enough: in particular enough on cryptographic hashing to imderpin the lecture on password management.
+
+
+Since Cybersecurity is a practical subject, much of the learning takes place through the coursework. The assessment for the module is structured with these weightings.
 \begin{itemize}
 \item[20]Class test --- basically a traditional examination. Normally a closed-book test, but this year, due to Covid-19, it will be sat by students who have dispersed, so will have to be open-book.
 \item[30]Group presentation. The class divide themselves into groups of 4--5, and each group picks a topic from either the ``OWASP Top 10'' \cite{OWASP2017a} or the ``OWASP Mobile Top  10'' \cite{OWASP2016a} and does a presentation on it to the rest of the class.  In terms of the human skills identified in section \ref{sec:human}, this is meant to help with the communication and team-working skills. Indeed, Covid-19 and the consequent dispersal of the students has meant that they are also learning remote team working: an unexpected bonus.  The author has found that it is extremely important to share this rationale, and the evidence at \cite{WallStreetJournal2018c,InfoSec2019a,Beaver2019c} with them.  Industrial speakers are also asked to stress these points.
@@ -215,10 +220,9 @@ On the practical side, the community could do much to help itself in the way of 
 \section*{Acknowledgement}
 
 %The authors wish to thank Sally Pearce, Academic Accreditation Manager at BCS, The Chartered Institute for IT for supplying the summary information related to accreditation of UK degree programmes. Many people, accreditors and accredited, have contributed to accreditation practice in the UK (and elsewhere), and spreading good practice.
-The first, second, fourth and fifth
-authors' institutions are members of the Institute of Coding, an
-initiative funded by the Office for Students (England) and the Higher
-Education Funding Council for Wales.
+
+Removed for blind refereeing. %BLIND
+%The first, second, fourth and fifth authors' institutions are members of the Institute of Coding, an initiative funded by the Office for Students (England) and the Higher Education Funding Council for Wales.
 
 
 %\section*{References}
