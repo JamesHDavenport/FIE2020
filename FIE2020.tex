@@ -2,6 +2,8 @@
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
+\usepackage{url}
+\usepackage[hyphenbreaks]{breakurl}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{booktabs}
@@ -10,6 +12,8 @@
 \usepackage{xcolor}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\def\UrlBreaks{\do\/\do-}
+
 \begin{document}
 
 \title{Overcoming the Challenges of Teaching Cybersecurity in UK Computer Science Degree Programmes}
@@ -88,9 +92,19 @@ cybersecurity, computer science education, curricula, accreditation, UK
 
 \section{Introduction}\label{sec:intro}
 An article published in the Harvard Business Review in August 2019 argued that ``{\emph{Every Computer Science Degree Should Require a Course in Cybersecurity}}''~\cite{cable_2019}; in the UK, universities
---- alongside government, industry and professional bodies -- have been championing this over recent years, focusing on computer science and cognate undergraduate degrees programmes. One professional body -- BCS, The Chartered Institute for IT -- has been mandating this in accredited undergraduate degree programmes since 2015~\cite{Cricketal2019}. Other authors have also made case for infusing cybersecurity in general education~\cite{Sobiesk2015} and described their approach~\cite{Blair2020}.  Delivering cybersecurity effectively across general computer science programmes presents a number of challenges related to pedagogy, underpinning educational resources, available skills and technical resources. This paper explores the progress to date, as well as a starting call to arms to the UK higher education sector (and other jurisdictions) by highlighting a number of future challenges and opportunities.
+--- alongside government, industry and professional bodies -- have been championing this over recent years, focusing on computer science and cognate undergraduate degrees programmes. One professional body -- BCS, The Chartered Institute for IT -- has been mandating this in accredited undergraduate degree programmes since 2015~\cite{Cricketal2019,itnowcyber:2019,itnowaccred:2020}. Other authors have also made case for infusing cybersecurity in general education~\cite{Sobiesk2015} and described their approach~\cite{Blair2020}.  Delivering cybersecurity effectively across general computer science programmes presents a number of challenges related to pedagogy, underpinning educational resources, available skills and technical resources. This paper explores the progress to date, as well as a starting call to arms to the UK higher education sector (and other jurisdictions) by highlighting a number of future challenges and opportunities.
 
-As part of its promotion of sustainability, the United Nations (UN) defines ''{\em{UN Sustainability Goal 9: Build resilient infrastructure, promote sustainable industrialization and foster innovation}}''~\cite{UNgoal9}. For our computing technology infrastructure to be resilient we need to maintain and enhance cybersecurity. To achieve that we need to grow cybersecurity knowledge. As such the enhancement of cybersecurity education contributes directly to enhancing sustainability. The failure to maintain software infrastructure has been brought home by the recent U.S. shortage of COBOL programmers \cite{Shein2020e}.  \cite{PangTanriverdi2017a} demolishes the ``security through antiquity'' argument often used to defend the COBOL systems, with \cite{Sternstein2015a} reporting that the explanation why key data were not encrypted was ``it is not feasible to implement on networks that are too old''.
+As part of its promotion of sustainability, the United Nations (UN)
+defines ''{\em{UN Sustainability Goal 9: Build resilient
+    infrastructure, promote sustainable industrialization and foster
+    innovation}}''~\cite{UNgoal9}. For our computing technology
+infrastructure to be resilient we need to maintain and enhance
+cybersecurity. To achieve that we need to grow cybersecurity
+knowledge. As such the enhancement of cybersecurity education
+contributes directly to enhancing sustainability. The failure to
+maintain software infrastructure has been brought home by the recent
+U.S. shortage of COBOL programmers~\cite{Shein2020e}.  It is also
+possible to demolish the ``security through antiquity'' argument often used to defend the COBOL systems~\cite{PangTanriverdi2017a}, with reports that the explanation why key data were not encrypted was ``it is not feasible to implement on networks that are too old''~\cite{Sternstein2015a}.
 
 % Question we mix first and third person? Which should we use?
 
@@ -99,7 +113,10 @@ As part of its promotion of sustainability, the United Nations (UN) defines ''{\
 %To do - what are the key points?
 %technical and not technical skills?%
 
-Though it is generally thought of as part of computing, cybersecurity is actually a multidisciplinary ``subject'', or, in the words of \cite{Parrishetal2018a} a \emph{meta-discipline}. This point has been made several times, e.g.  in \cite{Stockman2013}, who described integrating Criminal Justice and Political Science into the study of cybersecurity.  
+Though it is generally thought of as part of computing, cybersecurity
+is actually a multidisciplinary ``subject'', or a
+\emph{meta-discipline}~\cite{Parrishetal2018a}. This point has been
+made several times e.g. integrating Criminal Justice and Political Science into the study of cybersecurity~\cite{Stockman2013}.  
 \subsection{Academic skills}\label{sec:academic}
 The academic skill sets that a good Chief Information Security Officer (CISO) should have, and therefore that a cybersecurity student should acquire, can be broken into three rough groupings.
 \begin{itemize}
@@ -119,9 +136,9 @@ To defend against phishing, to inculcate good password habits\footnote{Whatever 
 \item Roles and responsibilities for non-technical teams are vague.''
 \end{itemize}
 All of these are managerial failings.
-\item{\bf Technical:} there are of course many technical things that a CISO needs to be on top of.  They feature in the list \cite{Beaver2017a} of ``10 Essential Elements for Success as an Information Security Professional'' as ``(6) Find your speciality; (7) Maintain your technical edge; (8) Constantly improve your methodologies''.
+\item{\bf Technical:} there are of course many technical things that a CISO needs to be on top of.  They feature in the list \cite{Beaver2017a} of ``{\emph{10 Essential Elements for Success as an Information Security Professional}}'' as ``{\emph{(6) Find your speciality; (7) Maintain your technical edge; (8) Constantly improve your methodologies}}''.
 
-These technical skills tend to be the ones that a Computer Science Department is best at teaching, though even here there are challenges --- see section \ref{practice}. One specific question is ``how much cryptography need a security expert know''. The classic answer is ``enough not to be dangerously ignorant, and not enough to be dangerously knowledgeable'', which is true but not helpful: see \S\ref{sec:second}.
+These technical skills tend to be the ones that a Computer Science Department is best at teaching, though even here there are challenges --- see section \ref{practice}. One specific question is ``{\emph{how much cryptography need a security expert know?}}''. The classic answer is ``{\emph{enough not to be dangerously ignorant, and not enough to be dangerously knowledgeable}}'', which is true but not helpful: see \S\ref{sec:second}.
 \end{itemize}
 \subsection{Human skills}\label{sec:human}
 Besides the subject-specific skills mentioned above, there are also the human, or `soft', skills. It could be argued (e.g. \cite{Palkar2013a}) that these are underrated throughout computing education, but they are certainly necessary in cybersecurity.
@@ -136,22 +153,30 @@ Besides the subject-specific skills mentioned above, there are also the human, o
 
 A Computer Science Department would probably claim that it taught most of these. Certainly a BCS-accredited degree has to evidence teaching and assessment of the first four of these. Collaboration/teamwork, is a long-standing requirement for accreditation, despite some student preferences %the students' 
 %JHD that "the students'" seems redundant
-for such work not to be included or assessed as part of their degree \cite{Cricketal2020a}. Generally, it can be challenging to engage students whole-heartedly in the development of these skills, especially as they are hard to assess in the rigorous way computer scientists (staff and students) are used to. 
+for such work not to be included or assessed as part of their degree~\cite{Cricketal2020a}. Generally, it can be challenging to engage students whole-heartedly in the development of these skills, especially as they are hard to assess in the rigorous way computer scientists (staff and students) are used to. 
 
-These skills are all areas most people could always improve. The extent to which the depth graduates evidence these skills, compared with industry's demands is common point of discussion with industrialists informally or more formally as department industry liaison committees / forums. These work ready skills have also been noted by employability reviews conducted in the UK \cite{shadbolt2016shadbolt,wakeham}. Notably the collaboration required in cybersecurity is generally part of a multi-function team, rather than the group software engineering activity that commonly is the response to the requirement to teach group working. Similarly the problem-solving required is that of being faced with an underspecified problem: ``it looks like we've been hacked'', but with a vast amount of information, most of it irrelevant.
+These skills are all areas most people could always improve. The extent to which the depth graduates evidence these skills, compared with industry's demands is common point of discussion with industrialists informally or more formally as department industry liaison committees/forums. These work ready skills have also been noted by employability reviews conducted in the UK~\cite{shadbolt2016shadbolt,wakeham}. Notably the collaboration required in cybersecurity is generally part of a multi-function team, rather than the group software engineering activity that commonly is the response to the requirement to teach group working. Similarly the problem-solving required is that of being faced with an underspecified problem: ``it looks like we've been hacked'', but with a vast amount of information, most of it irrelevant.
 %What else?
 
-Some alternative approaches to this are described in section \ref{sec:authors}.
+Some alternative approaches to this are described in Section~\ref{sec:authors}.
 
 \section{Developing effective cybersecurity teaching practice}\label{practice}
 
-What is the most appropriate way to teach cybersecurity? \cite{Weiss:2013:THC:2527148.2527180} highlights the benefits from teaching this in a practical manner. Real world case studies can be employed \cite[e.g.]{BritishAirways2018a,Zoom2020a}. Use can be made of guest lectures by industrialists to share practical insights and hence providing students with micro-exposure to the world of work: another positive contribution. One further approach is the inclusion of appropriate cybersecurity standards within the curricula.
+What is the most appropriate way to teach cybersecurity? It is clear
+there are benefits from teaching this in a practical
+manner~\cite{Weiss:2013:THC:2527148.2527180}. Real world case studies
+and authentic assessment can be
+employed~\cite[e.g.]{BritishAirways2018a,Zoom2020a}. Use can be made
+of guest lectures by industrialists to share practical insights and
+hence providing students with micro-exposure to the world of work:
+another positive contribution. One further approach is the inclusion
+of appropriate cybersecurity standards within the curricula.
 
 The PCI DSS \cite{PCI2018b} is one such standard that has been used in precisely this manner. PCI DSS underpins all processing of credit/debit cards. Nevertheless, it is very rarely mentioned in generalist computer scientist courses. This would not matter so much if everyone handling payments data were sent by their employers on an effective PCI DSS course. However, the payments business is now so spread across websites, often run by small and medium enterprises (SME), or non-specialists. Even larger enterprises are not immune: \cite{BritishAirways2018a} reports that the recent British Airways breach was caused by a failure to adhere to PCI DSS in website maintenance. Section \ref{sec:second} describes one way to bring PCI DSS to life in an assignment.
 
 Another way of adopting a more practical pedagogy is by teaching cybersecurity through the lens of hacking or the hacker curriculum \cite{bratus2010teaching}. Such an approach facilitates students to be more experimental and creative in their exploration of the discipline and can have corresponding benefits for their engagement. This approach is most commonly employed within specialist cybersecurity education rather than more mainstream computer science. As indicated previously in the context of 'phishing' the technical skills required to engage in penetration testing (or indeed ''hacking'') are not that sophisticated with the use of the available tools (e.g.~\cite{KaliLinux,metasploit})\footnote{The tools are intended for penetration testing but can be readily repurposed. }. However to fully understand the tool set and use it ethically would typically require more time and assessment than many computing departments wish to commit to the inclusion of cybersecurity in a mainstream computer science programme.
 
-\section{challenges in the recruitment, retention and professional development of faculty}\label{sec:staff}
+\section{Challenges in the recruitment, retention and professional development of faculty}\label{sec:staff}
 It is well known that cybersecurity skills are in short supply, in both industry~\cite{Ackerman2019a} and academia~\cite{schneider2013,endicott2018searching}. The demand for cybersecurity skills in industry makes it difficult for academia to attract academics with knowledge, practical experience, research background and academic aspirations. As universities expand their cybersecurity provision it is not uncommon to find multiple jobs advertised at the same time. Recent example have included a professor of cybersecurity, two senior academic positions and two junior academic positions in one advert. There are other examples in the UK of cybersecurity lecturing jobs remaining unfilled for longer than a year; there are also examples of cybersecurity research groups moving en masse from one university to another.
 
 % this survey is quite old now - something more recent the ESG 
@@ -201,7 +226,7 @@ Outsourcing to the cloud means that the students' ``hacking'' commands traverse 
 \section{Teaching Innovations}\label{sec:authors}
 As introduced in section \ref{sec:intro}, teaching cybersecurity well for the workplace is more than about academic skills. However, it is very hard to motivate computer scientists to study pure human skills. This is far from being a feature of students, as \cite{Beaver2019c} observes.
 \begin{quote}
-Still, technical knowledge seems to trump everything. I've attended national and regional information security conferences that have sessions on security careers and the essential soft skills for cybersecurity success. They're not nearly as well attended as the sessions on cool and sexy topics like threat hunting, cryptocurrency and ransomware.
+``{\emph{Still, technical knowledge seems to trump everything. I've attended national and regional information security conferences that have sessions on security careers and the essential soft skills for cybersecurity success. They're not nearly as well attended as the sessions on cool and sexy topics like threat hunting, cryptocurrency and ransomware.}}''
 \end{quote}
 Hence the ideal assignment in cybersecurity mixes the academic and human skills, preferably inseparably.
 
@@ -223,7 +248,7 @@ In general terms two alternatives approaches can be effectively adopted to the c
 \begin{enumerate}
 	\item Cybersecurity can be primarily delivered in a single course / module / subject and then referred to in other courses / modules/ subjects as appropriate.
 	
-	Or
+	{\emph{or}}
 	
 	\item  The teaching  and assessment can be distributed across the curricula.  
 \end{enumerate}
@@ -244,7 +269,7 @@ Since Cybersecurity is a practical subject, much of the learning takes place thr
 \item With which websites does your browser communicate during the transaction? Are there any that worry you, or whose function you do not understand?
 \item[*]Last year two different students, purchasing from two different UK-based sites, found \verb+yandex.ru+ appearing here.
 \item Looking at the logs, to which sites does your payment card number get sent, and how is it protected in transit? You \emph{should} quote the relevant part of the logs, but \emph{should} replace the card number and any other identifying/sensitive data, e.g. by \verb+NNNN NNNN NNNN NNNN+, before quoting.
-\item Looking at the HTML(+JavaScript etc.) you have saved, do you feel confident you know what it is doing with your data?
+\item Looking at the HTML (+JavaScript, etc) you have saved, do you feel confident you know what it is doing with your data?
 \item How dependent is the HTML you have on the correct functioning of the DNS? In particular, could bad DNS results result in a security problem?\label{DNS}
 \item What makes you think that the sum of money displayed to you is the sum that will be transmitted to your bank?
 \end{enumerate}
@@ -340,7 +365,7 @@ On the practical side, the community could do much to help itself in the way of 
 \end{enumerate}
 
 
-\section*{Acknowledgement}
+\section*{Acknowledgements}
 
 %The authors wish to thank Sally Pearce, Academic Accreditation Manager at BCS, The Chartered Institute for IT for supplying the summary information related to accreditation of UK degree programmes. Many people, accreditors and accredited, have contributed to accreditation practice in the UK (and elsewhere), and spreading good practice.
 
@@ -349,7 +374,7 @@ The first, second, fourth and fifth authors' institutions are members of the Ins
 The authors would like to thank Visiting Industrial Professor Dr Phil Brooke of Green Pike Ltd and the Royal Academy of Engineering for funding his position through the Visiting Professor Scheme for three academic years.
 
 %\section*{References}
-\IEEEtriggeratref{38}
+%\IEEEtriggeratref{38}
 
 \bibliographystyle{IEEEtran}
 %\bibliography{security}
