@@ -4,6 +4,7 @@
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
+\usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
@@ -30,30 +31,55 @@ Northumbria University, Newcastle upon Tyne, UK; Email: tom.prickett@northumbria
 \maketitle
 
 \begin{abstract}
-This Innovative Practice Full Paper explores the diversity of challenges relating to the teaching of
-cybersecurity in UK higher education degree programmes, through the lens of national policy, to the
-impact on pedagogy and practice. An article published in the Harvard Business Review in August 2019
-argued that \textit{"Every Computer Science Degree Should Require a Course in Cybersecurity "}; in the UK, universities -- alongside government, industry and professional engineering bodies -- have been
-championing this over recent years, focusing on computer science and cognate undergraduate degrees
-programmes; one such professional body (BCS, The Chartered Institute for IT) has been mandating this
-in accredited undergraduate degree programmes since 2015. Delivering cybersecurity effectively across
-general computer science programmes presents a number of challenges related to pedagogy,
-resources, faculty and infrastructure, as well as responding to industry requirements.
+This Innovative Practice Full Paper explores the diversity of
+challenges relating to the teaching of cybersecurity in UK higher
+education degree programmes, through the lens of national policy, to
+the impact on pedagogy and practice. An article published in the
+Harvard Business Review in August 2019 argued that \textit{"Every
+Computer Science Degree Should Require a Course in Cybersecurity "};
+in the UK, universities -- alongside government, industry and
+professional engineering bodies -- have been championing this over
+recent years, focusing on computer science and cognate undergraduate
+degrees programmes; one such professional body (BCS, The Chartered
+Institute for IT) has been mandating this in accredited undergraduate
+degree programmes since 2015. Delivering cybersecurity effectively
+across general computer science programmes presents a number of
+challenges related to pedagogy, resources, faculty and infrastructure,
+as well as responding to industry requirements.
 
-There is a serious demand for cybersecurity specialists, both in the UK and globally (estimates vary, but are always large – and increasing); there is thus significant and growing higher education provision
-related to specialist undergraduate and postgraduate courses focusing on varying aspects of
-cybersecurity (for example, cryptography, computer security, networks, digital forensics, ethical hacking, etc). To make our digital systems and products more secure, all in IT need to know some cybersecurity — thus, there is a case for depth as well as breadth; this is not a new concern, but it is a growing one. Computer science and cognate engineering disciplines are evolving to meet these demands -- both at school-level, as well as at university -- however, doing so is not without challenges. This paper explores the progress made to date in the UK, building on previous work in cybersecurity education and accreditation by highlighting key challenges and opportunities, as well as identifying a number of
-enhancement activities for use by the international cybersecurity education community. It frames these
-challenges through concerns with the quality and availability of underpinning educational resources, the
-competencies and skills of faculty (especially focusing on pedagogy, progression and assessment), and
-articulating the necessary technical resources and infrastructure related to delivering rigorous
+There is a serious demand for cybersecurity specialists, both in the
+UK and globally (estimates vary, but are always large – and
+increasing); there is thus significant and growing higher education
+provision related to specialist undergraduate and postgraduate courses
+focusing on varying aspects of cybersecurity (for example,
+cryptography, computer security, networks, digital forensics, ethical
+hacking, etc). To make our digital systems and products more secure,
+all in IT need to know some cybersecurity — thus, there is a case for
+depth as well as breadth; this is not a new concern, but it is a
+growing one. Computer science and cognate engineering disciplines are
+evolving to meet these demands -- both at school-level, as well as at
+university -- however, doing so is not without challenges. This paper
+explores the progress made to date in the UK, building on previous
+work in cybersecurity education and accreditation by highlighting key
+challenges and opportunities, as well as identifying a number of
+enhancement activities for use by the international cybersecurity
+education community. It frames these challenges through concerns with
+the quality and availability of underpinning educational resources,
+the competencies and skills of faculty (especially focusing on
+pedagogy, progression and assessment), and articulating the necessary
+technical resources and infrastructure related to delivering rigorous
 cybersecurity content in general computer science and cognate degrees.
 
-Though this critical evaluation of an emerging national case study of cybersecurity education in the UK,
-we also present a number of recommendations across policy and practice -- from pedagogic principles
-and developing effective cybersecurity teaching practice, challenges in the recruitment, retention and
-professional development of faculty, to supporting diverse routes into post-compulsory cybersecurity
-education (and thus, diverse careers) -- to provide the foundation for potential replicability and portability to other jurisdictions contemplating related education and skills reform initiatives and interventions.
+Though this critical evaluation of an emerging national case study of
+cybersecurity education in the UK, we also present a number of
+recommendations across policy and practice -- from pedagogic
+principles and developing effective cybersecurity teaching practice,
+challenges in the recruitment, retention and professional development
+of faculty, to supporting diverse routes into post-compulsory
+cybersecurity education (and thus, diverse careers) -- to provide the
+foundation for potential replicability and portability to other
+jurisdictions contemplating related education and skills reform
+initiatives and interventions.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -242,24 +268,24 @@ Rather than have a module dedicated to cybersecurity the teaching and assessment
 
 \begin{table*}[ht]
 	\caption{Cyber Security Curricula Coverage Case Study \S\ref{sec:fifth}\label{tab:CaseStudy5}}{%
-		\begin{tabular}{|p{3cm}|p{1cm}|p{6.5cm}|p{6.5cm}| }
-			\hline
+		\begin{tabular}{p{3cm} p{0.6cm} p{6.5cm} p{6.3cm}}
+			\toprule
 			Subject / Module & Year & Taught & How Assessed \\
-			\hline
+			\midrule
 			Web Technologies & 1 & Confidentiality, integrity and availability. Threats and Attacks, how they materialise and how those attacks exploit website vulnerabilities. & Web page providing user training related to cybersecurity. \\
-			\hline
+			\midrule
 			Systems Analysis & 1 & Personal, organisation and legal/regulatory framework in which a system can be used, including risks and constraints. & Self selected team Design Project \\
-			\hline
+			\midrule
 			Databases & 1 & Threats and Attacks, how they materialise and how those attacks exploit database vulnerabilities. & Examination questions\\
-			\hline
+			\midrule
 			Web Programming & 2 & Threats and Attacks, how they materialise and how those attacks exploit web vulnerabilities and approaches to mitigate. & A web application, secured again OWASP top ten vulnerabilities \\
-			\hline
+			\midrule
 			Programming Design and Development & 2 & Design, defensive programming and testing & Programming project and related report\\
-			\hline
+			\midrule
 			Networks, Operating Systems and Cybersecurity & 2 & Cybersecurity architecture and operations: physical and process controls that can be implemented across an organisation to reduce information and systems risk, identify, and mitigate the vulnerability, and ensure organisational compliance & Practical work and related report\\
-			\hline
+			\midrule
 			Team Project and Professionalism & 3 & Personal, organisation and legal/regulatory framework in which a system can be used, including risks and constraints. & Design and construction of a software component as part of a self selected team project and the evaluation of the project and its potential future exploitation. The projects are 'live' addressing the needs of a real client or problem.\\%
-\hline%
+\bottomrule%
 \end{tabular}%
 	}
 \end{table*}
